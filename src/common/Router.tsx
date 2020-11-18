@@ -7,12 +7,10 @@ import Detail from '../page/detail';
 const BasicRoute = () => (
     <HashRouter >
         <div>
-            <Link to="/home">page1</Link>
-            <Link to="/detail">page1</Link>
             <Switch>
-                <Route exact path="/" component={Home} />
-                <Route exact path="/home" component={Home} />
-                <Route exact path="/detail" component={Detail}/>
+                <Route exact path='/' component={Home} />
+                <Route exact path='/home' component={Home} />
+                <Route exact path='/detail/:id' component={Detail}/>
             </Switch>
        </div>
     </HashRouter>
