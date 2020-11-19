@@ -11,6 +11,9 @@ type StateType = {
 interface Father {
     state:StateType
 }
+export interface typecount{
+    num:Number
+}
 class Father extends React.Component {
     constructor(props:any) {
         super(props);
