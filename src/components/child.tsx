@@ -1,9 +1,14 @@
 import * as React from "react"
+import { array } from "prop-types";
 
-class Child extends React.Component{
+interface childProp{
+    datas:Number
+}
+
+class Child extends React.Component<childProp>{
     render(){
         return(
-            <div>子组件</div>
+            <div>我是子组件,父组件给我传了{this.props.datas}</div>
         )
     }
 }

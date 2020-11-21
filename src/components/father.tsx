@@ -1,39 +1,23 @@
 import * as React from 'react'
 
 import Child from './child'
-import { type } from 'os';
 
-type StateType = {
-    count?: Number,
-    n?: Number,
-    data?:Object
-}
-interface Father {
-    state:StateType
-}
-export interface typecount{
-    num:Number
-}
-class Father extends React.Component {
+class Father extends React.Component<any,any> {
     constructor(props:any) {
         super(props);
-        this.state = {
-            count: 0,
-            n: 1,
-            data:new Date()
-        }
     }
     //点击事件并传值
-    private testClick = (n: Number) => {
-        this.setState({
-            count:n
-       })
-    }
-    render(){
+    // private testClick =  (n: Number) => {
+    //     this.setState({
+    //         count:n
+    //    })
+    // }
+    render() {
+        const num = 123456;
         return(
             <div>
-                <div onClick={() => this.testClick(2)}>父组件,计数{this.state.count}</div>
-                <Child></Child>
+                <div>我是父组件</div>
+                <Child datas={num}></Child>
             </div>
            
         )   
